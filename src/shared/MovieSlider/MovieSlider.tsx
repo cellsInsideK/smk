@@ -16,7 +16,7 @@ export const MovieSlider = ({ data }: MovieSliderProps) => {
         {data?.docs.map((film) => (
           <Link to={`movie/${film.id}`} style={{ textDecoration: 'none' }}>
             <div className={styles.film}>
-              <img className={styles.filmImg} src={film.poster.url} alt="" />
+              <img className={styles.filmImg} src={film.poster.previewUrl} alt="" />
               <p>{film.name}</p>
             </div>
           </Link>
