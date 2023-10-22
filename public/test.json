@@ -1,0 +1,368 @@
+{
+  "fees": {
+    "world": {
+      "value": 12423,
+      "currency": "$"
+    },
+    "russia": {
+      "value": 7826,
+      "currency": "$"
+    },
+    "usa": {
+      "value": 12423,
+      "currency": "$"
+    }
+  },
+  "status": null,
+  "externalId": {
+    "kpHD": "418faf170db24c8a814434d6189e6bf5",
+    "imdb": "tt3114132",
+    "tmdb": 253251
+  },
+  "rating": {
+    "kp": 6.029,
+    "imdb": 6.6,
+    "filmCritics": 0,
+    "russianFilmCritics": 0,
+    "await": null
+  },
+  "votes": {
+    "kp": 1396,
+    "imdb": 4724,
+    "filmCritics": 0,
+    "russianFilmCritics": 1,
+    "await": 6
+  },
+  "backdrop": {
+    "url": "https://imagetmdb.com/t/p/original/xeSEzU5w1WcJFLtfjc3O9Ft0eku.jpg",
+    "previewUrl": "https://imagetmdb.com/t/p/w500/xeSEzU5w1WcJFLtfjc3O9Ft0eku.jpg"
+  },
+  "movieLength": 99,
+  "images": {
+    "framesCount": 5
+  },
+  "productionCompanies": [
+    {
+      "name": "Broad Green Pictures",
+      "url": "https://www.themoviedb.org/t/p/original/3rOhrdjnUHsf0GPa66b9KyR2MUx.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/3rOhrdjnUHsf0GPa66b9KyR2MUx.png"
+    },
+    {
+      "name": "LA Panda",
+      "url": "https://www.themoviedb.org/t/p/original/wsFoLgLvaS1FaYBt0pJ1LJ9v3cB.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/wsFoLgLvaS1FaYBt0pJ1LJ9v3cB.png"
+    },
+    {
+      "name": "TV3",
+      "url": "https://www.themoviedb.org/t/p/original/mPuVc7m1Ki7OQQvAYwYfIlEI3vu.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/mPuVc7m1Ki7OQQvAYwYfIlEI3vu.png"
+    },
+    {
+      "name": "TVE",
+      "url": "https://www.themoviedb.org/t/p/original/pkrdO9ykplO4Zc8edikoSX5APUN.png",
+      "previewUrl": "https://www.themoviedb.org/t/p/w500/pkrdO9ykplO4Zc8edikoSX5APUN.png"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "name": "Català",
+      "nameEn": "Catalan"
+    },
+    {
+      "name": "English",
+      "nameEn": "English"
+    },
+    {
+      "name": "Español",
+      "nameEn": "Spanish"
+    }
+  ],
+  "id": 791290,
+  "type": "movie",
+  "name": "10 000 км: Любовь на расстоянии",
+  "description": "Могут ли онлайн-технологии помочь любви пережить разлуку длиною в год и расстояние в 10,000 километров?",
+  "distributors": {
+    "distributor": "Артхаус",
+    "distributorRelease": null
+  },
+  "premiere": {
+    "world": "2014-03-10T00:00:00.000Z",
+    "russia": "2015-05-28T00:00:00.000Z"
+  },
+  "slogan": null,
+  "year": 2014,
+  "poster": {
+    "url": "https://st.kp.yandex.net/images/film_big/791290.jpg",
+    "previewUrl": "https://st.kp.yandex.net/images/film_iphone/iphone360_791290.jpg"
+  },
+  "facts": [
+    {
+      "value": "Из-за занятости в других проектах <a href=\"/name/439752/\" class=\"all\">Барбара Ленни</a> не смогла сыграть главную женскую роль в этом фильме. В итоге роль исполнила <a href=\"/name/42015/\" class=\"all\">Наталия Тена</a>.",
+      "type": "FACT",
+      "spoiler": false
+    }
+  ],
+  "genres": [
+    {
+      "name": "драма"
+    },
+    {
+      "name": "мелодрама"
+    },
+    {
+      "name": "комедия"
+    }
+  ],
+  "countries": [
+    {
+      "name": "Испания"
+    }
+  ],
+  "videos": {
+    "trailers": [
+      {
+        "url": "https://www.youtube.com/embed/X4nRYALz-UE",
+        "name": "10 000 км: Любовь на расстоянии",
+        "site": "youtube",
+        "type": "TRAILER"
+      },
+      {
+        "url": "https://www.youtube.com/embed/X4nRYALz-UE",
+        "name": "10 000 км: Любовь на расстоянии",
+        "site": "youtube",
+        "type": "TRAILER"
+      },
+      {
+        "url": "https://www.youtube.com/embed/64RxGE0i9mg",
+        "name": "10,000 Km Official US Release Trailer 1 (2015) - Romantic Drama HD",
+        "site": "youtube",
+        "type": "TRAILER"
+      }
+    ],
+    "teasers": []
+  },
+  "seasonsInfo": [],
+  "persons": [
+    {
+      "id": 42015,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_42015.jpg",
+      "name": "Наталия Тена",
+      "enName": "Natalia Tena",
+      "description": "Alex",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 1520592,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1520592.jpg",
+      "name": "Давид Вердагер",
+      "enName": "David Verdaguer",
+      "description": "Sergi",
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 2442159,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2442159.jpg",
+      "name": "Сириус Флац",
+      "enName": "Sirius Flatz",
+      "description": null,
+      "profession": "актеры",
+      "enProfession": "actor"
+    },
+    {
+      "id": 2040347,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2040347.jpg",
+      "name": "Виньет Эскобар",
+      "enName": "Vinyet Escobar",
+      "description": null,
+      "profession": "художники",
+      "enProfession": "designer"
+    },
+    {
+      "id": 2053528,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2053528.jpg",
+      "name": "Карлос Маркес-Марсет",
+      "enName": "Carlos Marques-Marcet",
+      "description": null,
+      "profession": "режиссеры",
+      "enProfession": "director"
+    },
+    {
+      "id": 2053528,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2053528.jpg",
+      "name": "Карлос Маркес-Марсет",
+      "enName": "Carlos Marques-Marcet",
+      "description": null,
+      "profession": "монтажеры",
+      "enProfession": "editor"
+    },
+    {
+      "id": 2273851,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2273851.jpg",
+      "name": "Джулиана Монтаньес",
+      "enName": "Juliana Montañés",
+      "description": null,
+      "profession": "монтажеры",
+      "enProfession": "editor"
+    },
+    {
+      "id": 1702178,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1702178.jpg",
+      "name": "Дагмар Уивер-Мэдсен",
+      "enName": "Dagmar Weaver-Madsen",
+      "description": null,
+      "profession": "операторы",
+      "enProfession": "operator"
+    },
+    {
+      "id": 732412,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_732412.jpg",
+      "name": "Тоно Фольгера",
+      "enName": "Tono Folguera",
+      "description": null,
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 2273847,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2273847.jpg",
+      "name": "Сержи Морено",
+      "enName": "Sergi Moreno",
+      "description": null,
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 2252561,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2252561.jpg",
+      "name": "Пау Брунет",
+      "enName": "Pau Brunet",
+      "description": null,
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 1926653,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1926653.jpg",
+      "name": "Яна Диаз Джул",
+      "enName": "Jana Diaz Juhl",
+      "description": null,
+      "profession": "продюсеры",
+      "enProfession": "producer"
+    },
+    {
+      "id": 2053528,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2053528.jpg",
+      "name": "Карлос Маркес-Марсет",
+      "enName": "Carlos Marques-Marcet",
+      "description": null,
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 2612700,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2612700.jpg",
+      "name": "Клара Роке",
+      "enName": "Clara Roquet",
+      "description": null,
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 42015,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_42015.jpg",
+      "name": "Наталия Тена",
+      "enName": "Natalia Tena",
+      "description": null,
+      "profession": "редакторы",
+      "enProfession": "writer"
+    },
+    {
+      "id": 1520592,
+      "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1520592.jpg",
+      "name": "Давид Вердагер",
+      "enName": "David Verdaguer",
+      "description": null,
+      "profession": "редакторы",
+      "enProfession": "writer"
+    }
+  ],
+  "lists": [],
+  "typeNumber": 1,
+  "alternativeName": "10.000 Km",
+  "enName": "Long Distance",
+  "names": [
+    {
+      "name": "10 000 км: Любовь на расстоянии"
+    },
+    {
+      "name": "10.000 Km"
+    },
+    {
+      "name": "Long Distance",
+      "language": "US",
+      "type": null
+    },
+    {
+      "name": "Medan vi dansar",
+      "language": "SE",
+      "type": null
+    },
+    {
+      "name": "Η απόσταση μεταξύ μας",
+      "language": "GR",
+      "type": null
+    },
+    {
+      "name": "10 000 Km",
+      "language": "ES",
+      "type": "Right spelling"
+    },
+    {
+      "name": "10.000 Χιλιόμετρα, Η Απόσταση Μεταξύ μας",
+      "language": "GR",
+      "type": null
+    }
+  ],
+  "ageRating": 18,
+  "budget": {},
+  "ratingMpaa": "r",
+  "updateDates": [],
+  "imagesInfo": {
+    "framesCount": 5
+  },
+  "updatedAt": "2023-09-08T15:52:32.366Z",
+  "similarMovies": [
+    {
+      "id": 571337,
+      "name": "Как сумасшедший",
+      "enName": null,
+      "alternativeName": "Like Crazy",
+      "type": "movie",
+      "poster": {
+        "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/8fd9bc77-67ae-42aa-a774-ac4048ac780a/orig",
+        "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/8fd9bc77-67ae-42aa-a774-ac4048ac780a/x1000"
+      }
+    }
+  ],
+  "sequelsAndPrequels": [],
+  "shortDescription": null,
+  "technology": {
+    "hasImax": false,
+    "has3D": false
+  },
+  "ticketsOnSale": false,
+  "logo": {
+    "url": null
+  },
+  "watchability": {
+    "items": []
+  },
+  "top10": null,
+  "top250": null,
+  "deletedAt": null,
+  "isSeries": false,
+  "seriesLength": null,
+  "totalSeriesLength": null
+}

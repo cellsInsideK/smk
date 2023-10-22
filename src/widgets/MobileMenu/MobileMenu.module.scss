@@ -1,0 +1,33 @@
+.menu {
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background-color: rgba(45, 48, 59, 0.98);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  position: fixed;
+  display: none;
+
+  padding: 30px 90px;
+
+  @media (max-width: 500px) {
+    padding: 24px 15px;
+  }
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  color: var(--primary-color);
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+}
