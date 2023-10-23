@@ -162,6 +162,7 @@
   & > p {
     text-shadow: 2px 2px 2px black;
     padding-bottom: 5px;
+    width: min-content;
   }
 
   @media (max-width: 1000px) {

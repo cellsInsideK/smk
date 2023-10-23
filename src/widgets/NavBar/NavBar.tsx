@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <header className={styles.main}>
-      <div className={styles.logo}>skufilms</div>
+      <div className={styles.logo}>smk films</div>
       <nav>
         <ul className={styles.list}>
           {items.map((elem, index) => (
@@ -31,11 +31,12 @@ const NavBar = () => {
         </ul>
       </nav>
       <div className={styles.right}>
-        <img className={styles.icon} src="/search.svg" alt="" />
+        <Link to={'search'}>
+          <img className={styles.icon} src="/search.svg" alt="" />
+        </Link>
+
         <div className={styles.separator}></div>
         <img className={styles.icon} src="/fav.svg" alt="" />
-        <img className={styles.icon} src="/user.svg" alt="" />
-        <img className={styles.burger} src="/burger.svg" alt="" />
       </div>
     </header>
   );

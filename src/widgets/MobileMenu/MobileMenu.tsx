@@ -16,6 +16,7 @@ export const MobileMenu = () => {
           {items.map((elem, index) => (
             <li key={index}>
               <Link
+                onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}
                 replace
                 className={styles.item}
                 style={{ textDecoration: 'none' }}

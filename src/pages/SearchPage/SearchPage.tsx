@@ -1,50 +1,71 @@
 import { useEffect, useState } from 'react';
 import styles from './SearchPage.module.scss';
-import { NewFilm } from '../../widgets/Sections/model';
+import { useDebounce } from '../../shared/hooks/useDebounced';
 import { Link } from 'react-router-dom';
+import { SearchMovie } from './model';
+import { Pagination } from 'antd';
 
-interface SearchPageProps {
-  title: string;
-  type: string;
-}
-
-export const SearchPage = ({ title, type }: SearchPageProps) => {
-  const [films, setFilms] = useState<NewFilm>();
-  //   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(`https://api.kinopoisk.dev/v1.3/movie?page=1&limit=20&type=${type}`, {
-      headers: {
-        'X-API-KEY': import.meta.env.VITE_API_KEY,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => setFilms(data));
-  }, [type]);
+export const SearchPage = () => {
+  const [films, setFilms] = useState<SearchMovie>();
+  const [value, setValue] = useState('');
+  const [page, setPage] = useState(1);
+  const debouncedValue = useDebounce(value, 700);
 
   useEffect(() => {
-    document.title = title;
-  }, [title]);
+    if (debouncedValue.length > 0) {
+      fetch(
+        `https://api.kinopoisk.dev/v1.2/movie/search?poster=!null&page=${page}&limit=14&query='${debouncedValue}'`,
+        {
+          headers: {
+            'X-API-KEY': import.meta.env.VITE_API_KEY,
+          },
+        },
+      )
+        .then((res) => res.json())
+        .then((data) => setFilms(data));
+    }
+  }, [debouncedValue, page]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [debouncedValue]);
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{title}</h2>
-      <div className={styles.options}>
-        {/* <div>
-          <select name="" id=""></select>
-        </div> */}
-        {films?.docs.map((movie) => (
-          <Link
-            style={{ textDecoration: 'none' }}
-            key={movie.id}
-            to={`/movie/${movie.id}`}
-            onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className={styles.film}>
-              <img className={styles.filmImg} src={movie.poster.previewUrl} alt="" />
-              <p>{movie.name}</p>
-            </div>
-          </Link>
-        ))}
+      <h2 className={styles.title}>Поиск фильмов и сериалов</h2>
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        className={styles.input}
+        type="text"
+        placeholder="Введите название"
+      />
+      <div className={styles.movies}>
+        {films?.docs
+          .filter((value) => value.poster)
+          .map((movie) => (
+            <Link
+              style={{ textDecoration: 'none' }}
+              key={movie.id}
+              to={`/movie/${movie.id}`}
+              onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
+              <div className={styles.film}>
+                <img className={styles.filmImg} src={movie.poster} alt="" />
+                <p>{movie.name ? movie.name : movie.enName}</p>
+              </div>
+            </Link>
+          ))}
+      </div>
+      <div className={styles.pagination}>
+        {films?.pages ? (
+          <Pagination
+            onChange={(page) => setPage(page)}
+            defaultCurrent={1}
+            showSizeChanger={false}
+            current={page}
+            total={films?.pages}
+          />
+        ) : null}
       </div>
     </div>
   );
