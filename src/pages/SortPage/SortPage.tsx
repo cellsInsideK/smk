@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './SortPage.module.scss';
 import { NewFilm } from '../../widgets/Sections/model';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Pagination } from 'antd';
 
 interface SearchPageProps {
@@ -73,7 +73,8 @@ const sortType = [
 export const SortPage = ({ title, type }: SearchPageProps) => {
   const [films, setFilms] = useState<NewFilm>();
   const [loading, setLoading] = useState(true);
-  const [genre, setGenre] = useState('');
+  const [searchParams] = useSearchParams();
+  const [genre, setGenre] = useState(searchParams.get('genre') ?? '');
   const [rating, setRating] = useState('0-10');
   const [year, setYear] = useState('0-2023');
   const [sort, setSort] = useState(sortType[0].value);
@@ -82,7 +83,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://api.kinopoisk.dev/v1.3/movie?poster.previewUrl=!null&sortField[]=votes.kp&sortType[]=-1&sortType[]=-1&page=${page}&limit=21&type=${type}`,
+      `https://api.kinopoisk.dev/v1.3/movie?poster.previewUrl=!null&sortField[]=votes.kp&sortType[]=-1&sortType[]=-1&page=${page}&limit=21&type=${type}&genres.name=${genre}`,
       {
         headers: {
           'X-API-KEY': import.meta.env.VITE_API_KEY,
@@ -92,7 +93,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
       .then((res) => res.json())
       .then((data) => setFilms(data))
       .then(() => setLoading(false));
-    setGenre('');
+    setGenre(searchParams.get('genre') ?? '');
     setRating('0-10');
     setYear('0-2023');
     setSort(sortType[0].value);

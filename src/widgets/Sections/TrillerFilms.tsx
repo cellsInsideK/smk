@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './NewFilms.module.scss';
 import { NewFilm } from './model';
 import { MovieSlider } from '../../shared/MovieSlider/MovieSlider';
+import { Link } from 'react-router-dom';
 
 export const TrillerFilms = () => {
   const [films, setFilms] = useState<NewFilm>();
@@ -24,7 +25,9 @@ export const TrillerFilms = () => {
     <section className={styles.container}>
       {!loading ? (
         <>
-          <h2 className={styles.title}>Триллер</h2>
+          <Link style={{ textDecoration: 'none', color: 'white' }} to={'films?genre=триллер'}>
+            <h2 className={styles.title}>Триллер {'>'}</h2>
+          </Link>
           <MovieSlider data={films!} />
         </>
       ) : null}
