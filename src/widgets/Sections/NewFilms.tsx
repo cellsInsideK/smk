@@ -8,9 +8,10 @@ export const NewFilms = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.kinopoisk.dev/v1.3/movie?type=movie&year=2022-2023`, {
+    fetch(`https://api.kinopoisk.dev/v1.4/movie?type=movie&year=2022-2023`, {
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
+        'Access-Control-Allow-Origin': '*',
       },
     })
       .then((res) => res.json())

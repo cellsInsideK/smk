@@ -83,7 +83,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://api.kinopoisk.dev/v1.3/movie?poster.previewUrl=!null&sortField[]=votes.kp&sortType[]=-1&limit=21&type=${type}`,
+      `https://api.kinopoisk.dev/v1.4/movie?poster.previewUrl=!null&sortField[]=votes.kp&sortType[]=-1&limit=21&type=${type}`,
       {
         headers: {
           'X-API-KEY': import.meta.env.VITE_API_KEY,
@@ -106,7 +106,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
     const searchSort = sort !== sortType[0].value ? `&sortField[]=${sort}` : '';
 
     fetch(
-      `https://api.kinopoisk.dev/v1.3/movie?poster.previewUrl=!null${searchSort}&sortField[]=votes.kp&sortType[]=-1&page=${page}&limit=21&type=${type}&rating.kp=${rating}&year=${year}` +
+      `https://api.kinopoisk.dev/v1.4/movie?poster.previewUrl=!null${searchSort}&sortField[]=votes.kp&sortType[]=-1&page=${page}&limit=21&type=${type}&rating.kp=${rating}&year=${year}` +
         searchGenres,
       {
         headers: {

@@ -7,7 +7,7 @@ export const RandomPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.kinopoisk.dev/v1.3/movie/random', {
+    fetch('https://api.kinopoisk.dev/v1.4/movie/random', {
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
       },

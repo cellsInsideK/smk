@@ -14,7 +14,7 @@ export const SearchPage = () => {
   useEffect(() => {
     if (debouncedValue.length > 0) {
       fetch(
-        `https://api.kinopoisk.dev/v1.2/movie/search?poster=!null&page=${page}&limit=14&query='${debouncedValue}'`,
+        `https://api.kinopoisk.dev/v1.4/movie/search?poster=!null&page=${page}&limit=14&query='${debouncedValue}'`,
         {
           headers: {
             'X-API-KEY': import.meta.env.VITE_API_KEY,

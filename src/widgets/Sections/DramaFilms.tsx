@@ -9,7 +9,7 @@ export const DramaFilms = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.kinopoisk.dev/v1.3/movie?genres.name=драма`, {
+    fetch(`https://api.kinopoisk.dev/v1.4/movie?genres.name=драма`, {
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
       },

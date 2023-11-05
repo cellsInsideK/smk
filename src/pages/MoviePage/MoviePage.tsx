@@ -9,7 +9,7 @@ export function MoviePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.kinopoisk.dev/v1.3/movie/${id}`, {
+    fetch(`https://api.kinopoisk.dev/v1.4/movie/${id}`, {
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
       },
@@ -21,12 +21,6 @@ export function MoviePage() {
       })
       .then(() => setLoading(false));
   }, [id]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:5173/test.json')
-  //     .then((res) => res.json())
-  //     .then((data) => setMovieData(data));
-  // }, []);
 
   return (
     <>
