@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import styles from './SortPage.module.scss';
-import { NewFilm } from '../../widgets/Sections/model';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Pagination } from 'antd';
+import { Sort } from './model';
 
 interface SearchPageProps {
   title: string;
@@ -71,12 +71,12 @@ const sortType = [
 ];
 
 export const SortPage = ({ title, type }: SearchPageProps) => {
-  const [films, setFilms] = useState<NewFilm>();
+  const [films, setFilms] = useState<Sort>();
   const [loading, setLoading] = useState(true);
   const [searchParams] = useSearchParams();
   const [genre, setGenre] = useState(searchParams.get('genre') ?? '');
   const [rating, setRating] = useState('0-10');
-  const [year, setYear] = useState('0-2023');
+  const [year, setYear] = useState('2022-2023');
   const [sort, setSort] = useState(sortType[0].value);
   const [page, setPage] = useState(1);
 
@@ -95,7 +95,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
       .then(() => setLoading(false));
     setGenre(searchParams.get('genre') ?? '');
     setRating('0-10');
-    setYear('0-2023');
+    setYear('1874-2023');
     setSort(sortType[0].value);
     setPage(1);
   }, [type]);
@@ -172,7 +172,7 @@ export const SortPage = ({ title, type }: SearchPageProps) => {
               id="year"
               value={year}
               onChange={(e) => setYear(e.target.value)}>
-              <option value="0-2023">Все года</option>
+              <option value="1874-2023">Все года</option>
               {years.map((year) => (
                 <option key={year} value={year}>
                   {year}

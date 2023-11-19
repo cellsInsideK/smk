@@ -50,7 +50,7 @@ export const SearchPage = () => {
               to={`/movie/${movie.id}`}
               onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className={styles.film}>
-                <img className={styles.filmImg} src={movie.poster} alt="" />
+                <img className={styles.filmImg} src={movie.poster.previewUrl} alt="" />
                 <p>{movie.name ? movie.name : movie.enName}</p>
               </div>
             </Link>

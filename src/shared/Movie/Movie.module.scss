@@ -210,6 +210,11 @@
     margin-top: 20px;
     color: white;
     text-decoration: none;
+    width: 200px;
+
+    @media (max-width: 500px) {
+      width: 150px;
+    }
   }
   @media (max-width: 500px) {
     width: 150px;

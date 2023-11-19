@@ -1,9 +1,9 @@
 import styles from './Movie.module.scss';
-import MovieInterface from './model';
 import classnames from 'classnames';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { MovieInterface } from './model';
 
 interface MovieProps {
   data: MovieInterface;
@@ -15,6 +15,7 @@ export const Movie = ({ data }: MovieProps) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+  const backdrop = data.backdrop.url;
 
   return (
     <div
@@ -22,7 +23,7 @@ export const Movie = ({ data }: MovieProps) => {
       style={{
         background: `linear-gradient(180deg, #1a1d29 0, rgba(26, 29, 41, 0) 29.35%),
     linear-gradient(90deg, #1a1d29 0, rgba(26, 29, 41, 0) 73.85%),
-    linear-gradient(180deg, rgba(26, 29, 41, 0) 27.52%, #1a1d29 97.48%), url(${data?.backdrop.url})`,
+    linear-gradient(180deg, rgba(26, 29, 41, 0) 27.52%, #1a1d29 97.48%), url(${backdrop})`,
       }}>
       <div className={styles.inner}>
         <img src={data?.poster.url} className={styles.poster} alt="" />
@@ -47,7 +48,7 @@ export const Movie = ({ data }: MovieProps) => {
             ) : null}
             <p className={styles.text}>{data?.year}</p>
             <p className={styles.text} style={{ textTransform: 'capitalize' }}>
-              {data?.genres[0].name}
+              {data.genres ? data?.genres[0].name : ''}
             </p>
             {data?.movieLength ? (
               <p className={styles.text}>

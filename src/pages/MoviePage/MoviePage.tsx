@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import MovieInterface from '../../shared/Movie/model';
 import { Movie } from '../../shared/Movie/Movie';
+import { MovieInterface } from '../../shared/Movie/model';
 
 export function MoviePage() {
   const { id } = useParams();

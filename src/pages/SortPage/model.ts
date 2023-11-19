@@ -1,4 +1,12 @@
-export interface MovieInterface {
+export interface Sort {
+  docs: Doc[];
+  total: number;
+  limit: number;
+  page: number;
+  pages: number;
+}
+
+export interface Doc {
   id: number;
   externalId: ExternalId;
   name: string;

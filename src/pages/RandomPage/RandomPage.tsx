@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import MovieInterface from '../../shared/Movie/model';
 import { Movie } from '../../shared/Movie/Movie';
+import { MovieInterface } from '../../shared/Movie/model';
 
 export const RandomPage = () => {
   const [movieData, setMovieData] = useState<MovieInterface>();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.kinopoisk.dev/v1.4/movie/random', {
+    fetch('https://api.kinopoisk.dev/v1.4/movie/random?votes.kp=4000-66666666&rating.kp=6.5-10', {
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
       },
